@@ -18,12 +18,8 @@ public class Main {
          * */
 
         Vehicle vehicle = applicationContext.getBean(Vehicle.class);
-        System.out.println(vehicle.getName());
+        System.out.println(vehicle);
 
-        String hello = applicationContext.getBean(String.class);
-        System.out.println(hello);
 
-        Integer number = applicationContext.getBean(Integer.class);
-        System.out.println(number);
     }
 }
