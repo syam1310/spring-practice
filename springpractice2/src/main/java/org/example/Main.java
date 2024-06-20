@@ -18,7 +18,7 @@ public class Main {
          * */
 
         Vehicle vehicle = applicationContext.getBean(Vehicle.class);
-        System.out.println(vehicle);
+        System.out.println(vehicle.getName());
 
 
     }
