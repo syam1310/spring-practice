@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns="http://www.thymeleaf.org"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org http://www.thymeleaf.org/4.0/thymeleaf.xsd">
 
+<head>
+    <!-- Include necessary meta tags, CSS links, and other head content here -->
 </head>
+
 <body>
 <header id="site-header" class="fixed-top">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand"><i class="fas fa-graduation-cap"></i>Eazy School
-            </a>
+            <!-- Thymeleaf link using th:href -->
+            <a th:href="@{/home}" class="navbar-brand"><i class="fas fa-graduation-cap"></i>Eazy School</a>
+
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -18,17 +24,19 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page">Home</a>
+                        <!-- Thymeleaf link for active class -->
+                        <a th:href="@{/home}" class="nav-link active" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Courses</a>
+                        <a th:href="@{/courses}" class="nav-link">Courses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Contact</a>
+                        <a th:href="@{/contact}" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
-            <!-- toggle switch for light and dark theme -->
+
+            <!-- Toggle switch for light and dark theme -->
             <div class="cont-ser-position">
                 <nav class="navigation">
                     <div class="theme-switch-wrapper">
@@ -47,4 +55,5 @@
     </div>
 </header>
 </body>
+
 </html>
